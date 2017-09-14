@@ -3,7 +3,7 @@
 
 const outputEarth = () => {
 	let earthString = "";
-	earthString += 	`<section>`;
+	earthString += 	`<div class="col-md-6 col-md-offset-3">`;
 	earthString += 		`<h3>Name: Earth</h3>`;
 	earthString += 		`<p>Year discovered: 2017 years ago</p>`;
 	earthString += 		`<p>Mass: 5.972 x 10^24 kg</p>`;
@@ -12,7 +12,7 @@ const outputEarth = () => {
 	earthString += 		`<p>Atmosphere composition: 78% nitrogen, 21% oxygen, 1% argon </p>`;
 	earthString += 		`<p>Satellites: Moon</p>`;
 	earthString += 		`<p>Explorers: Matt Damon & Friends</p>`;
-	earthString += 	`</section>`;
+	earthString += 	`</div>`;
 	return earthString;
 };
 
@@ -22,7 +22,7 @@ module.exports = outputEarth;
 
 const outputJupiter = () => {
 	let jupiterString = "";
-	jupiterString +=	`<section>`;
+	jupiterString +=	`<div class="col-md-6 col-md-offset-3">`;
 	jupiterString +=		`<h3>Name: Jupiter</h3>`;
 	jupiterString +=		`<p>First Detailed Observations: 1610 by Galileo</p>`;
 	jupiterString +=		`<p>Mass: 1.8986×1027 kg</p>`;
@@ -31,7 +31,7 @@ const outputJupiter = () => {
 	jupiterString +=		`<p>Atmosphere composition: Hydrogen, Helium</p>`;
 	jupiterString +=		`<p>Satellites: 53 confirmed</p>`;
 	jupiterString +=		`<p>Name of any probes/orbiters that have visited or landed on that planet: Pioneer 10 & 11, Voyager 1 & 2, Galileo, Ulysses, Cassini, New Horizon, Juno</p>`;
-	jupiterString +=	`</section>`;
+	jupiterString +=	`</div>`;
 	return jupiterString;
 };
 
@@ -41,22 +41,22 @@ module.exports = outputJupiter;
 
 const SolarSystemGenerator = require('./solarSystemGenerator');
 
-document.getElementById("mercury").innerHTML = SolarSystemGenerator.mercury();
-document.getElementById("venus").innerHTML = SolarSystemGenerator.venus();
-document.getElementById("earth").innerHTML = SolarSystemGenerator.earth();
-document.getElementById("mars").innerHTML = SolarSystemGenerator.mars();
-document.getElementById("jupiter").innerHTML = SolarSystemGenerator.jupiter();
-document.getElementById("saturn").innerHTML = SolarSystemGenerator.saturn();
-document.getElementById("uranus").innerHTML = SolarSystemGenerator.uranus();
-document.getElementById("neptune").innerHTML = SolarSystemGenerator.neptune();
-	// document.getElementById("output").innerHTML = GreetingGenerator[languageSelected]();
+document.getElementById("buttons").addEventListener("click", (event) => {
+	let planetSelected;
+	if (event.target.id === "buttons") {
+		planetSelected = "earth";
+	} else {
+		planetSelected = event.target.id;
+	}
+	document.getElementById("output").innerHTML = SolarSystemGenerator[planetSelected]();
+});
 
 },{"./solarSystemGenerator":8}],4:[function(require,module,exports){
 "use strict";
 
 const outputMars = () => {
 	let marsString = "";
-	marsString += 	`<section>`;
+	marsString += 	`<div class="col-md-6 col-md-offset-3">`;
 	marsString += 		`<h3>Name: Mars</h3>`;
 	marsString += 		`<p>Year discovered: 1659</p>`;
 	marsString += 		`<p>Mass: 6.39 x 10^23 kg</p>`;
@@ -65,7 +65,7 @@ const outputMars = () => {
 	marsString += 		`<p>Atmosphere composition: 95.32% Carbon Dioxide, 2.7% Nitrogen, 1.6% Argon, 0.13% Carbon Monoxide</p>`;
 	marsString += 		`<p>Satellites: Phobos and Deimos</p>`;
 	marsString += 		`<p>Explorers: Matt Damon</p>`;
-	marsString += 	`</seciton>`;
+	marsString += 	`</div>`;
 	return marsString;
 };
 module.exports = outputMars;
@@ -74,7 +74,7 @@ module.exports = outputMars;
 
 const oututMercury = () => {
 	let mercuryString ="";
-	mercuryString +=	`<section>`;
+	mercuryString +=	`<div class="col-md-6 col-md-offset-3">`;
 	mercuryString +=		`<h3>Name: Mercury </h3>`;
 	mercuryString +=		`<p>Year discovered: One of the earliest records of Mercury comes from the Sumerians around 3,000 BC</p>`;
 	mercuryString +=		`<p>Mass: 3.285 × 10^23 kg </p>`;
@@ -83,7 +83,7 @@ const oututMercury = () => {
 	mercuryString +=		`<p>Atmosphere composition: contains small amounts of hydrogen, helium, and oxygen. It also has even tinier amounts of sodium, potassium, calcium, and magnesium</p>`;
 	mercuryString +=		`<p>Satellites: no natural satellites </p>`;
 	mercuryString +=		`<p>Name of any probes/orbiters/explorers that have visited or landed on that planet: United States' Mariner 10</p>`;
-	mercuryString +=	`</section>`;
+	mercuryString +=	`</div>`;
 	return mercuryString;
 };
 
@@ -93,7 +93,7 @@ module.exports = oututMercury;
 
 const outputNeptune = () => {
 	let neptuneString = "";
-	neptuneString +=	`<section>`;
+	neptuneString +=	`<div class="col-md-6 col-md-offset-3">`;
 	neptuneString +=		`<h3>Name: Neptune</h3>`;
 	neptuneString +=		`<p>Year discovered: 1846</p>`;
 	neptuneString +=		`<p>Mass: 1.0243×1026 kg</p>`;
@@ -102,7 +102,7 @@ const outputNeptune = () => {
 	neptuneString +=		`<p>Atmosphere composition: hydrogen and helium, with trace amounts of methane, water, ammonia and other ices</p>`;
 	neptuneString +=		`<p>Satellites: 13 known moons, Triton being the largest</p>`;
 	neptuneString +=		`<p>Name of any probes/orbiters/explorers that have visited or landed on that planet: Voyager 2 has been the only man-made probe to approach Neptune</p>`;
-	neptuneString +=	`</section>`;
+	neptuneString +=	`</div>`;
 	return neptuneString;
 };
 module.exports = outputNeptune;
@@ -111,7 +111,7 @@ module.exports = outputNeptune;
 
 const outputSaturn = () => {
 	let saturnString = "";
-	saturnString += 	`<section>`;
+	saturnString += 	`<div class="col-md-6 col-md-offset-3">`;
 	saturnString += 		`<h3>Name: Saturn</h3>`;
 	saturnString += 		`<p>Year discovered: First Observation: ~700BCE</p>`;
 	saturnString += 		`<p>Mass: 5.683 × 10^26 kg</p>`;
@@ -120,7 +120,7 @@ const outputSaturn = () => {
 	saturnString += 		`<p>Atmosphere composition: 96.3% molecular hydrogen and 3.25% helium by volume</p>`;
 	saturnString += 		`<p>Satellites: 62</p>`;
 	saturnString += 		`<p>Name of any probes/orbiters that have visited or landed on that planet: Pioneer 10 & 11, Voyager 1 & 2, Galileo, Ulysses, Cassini, New Horizon, Juno</p>`;
-	saturnString += 	`</section>`;
+	saturnString += 	`</div>`;
 	return saturnString;
 };
 module.exports = outputSaturn;
@@ -147,7 +147,7 @@ module.exports = greetingGenerator;
 
 const outputUranus = () => {
 	let uranusString = "";
-	uranusString +=	`<seciton>`;
+	uranusString +=	`<div class="col-md-6 col-md-offset-3">`;
 	uranusString +=		`<h3>Name: Uranus</h3>`;
 	uranusString +=		`<p>Year discovered: 1781</p>`;
 	uranusString +=		`<p>Mass: (8.6810±0.0013)×1025 kg</p>`;
@@ -156,7 +156,7 @@ const outputUranus = () => {
 	uranusString +=		`<p>Atmosphere composition: Molecular hydrogen: 82.5%, Helium: 15.2%, Methane: 2.3%</p>`;
 	uranusString +=		`<p>Satellites: 27 Known Satellites</p>`;
 	uranusString +=		`<p>Name of any probes/orbiters that have visited or landed on that planet: Voyager 2, closest approach in 1986</p>`;
-	uranusString +=	`</section>`;
+	uranusString +=	`</div>`;
 	return uranusString;
 };
 module.exports = outputUranus;
@@ -165,7 +165,7 @@ module.exports = outputUranus;
 
 const outputVenus = () => {
 	let venusString = "";
-	venusString +=	`<section>`;
+	venusString +=	`<div class="col-md-6 col-md-offset-3">`;
 	venusString +=		`<h3>Name: Venus </h3>`;
 	venusString +=		`<p>Year discovered: Since Venus is so bright and noticable in the sky, it was probably seen by the first groups of humans</p>`;
 	venusString +=		`<p>Mass: 4.867 × 10^24 kg </p>`;
@@ -174,7 +174,7 @@ const outputVenus = () => {
 	venusString +=		`<p>Atmosphere composition: primarily of carbon dioxide </p>`;
 	venusString +=		`<p>Satellites: No natural satellites </p>`;
 	venusString +=		`<p>Name of any probes/orbiters/explorers that have visited or landed on that planet:United States' Mariner 10, Russian Venera 9</p>`;
-	venusString +=	`</section>`;
+	venusString +=	`</div>`;
 	return venusString;
 };
 module.exports = outputVenus;
