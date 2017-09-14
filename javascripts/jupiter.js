@@ -2,7 +2,7 @@
 
 const outputJupiter = () => {
 	let jupiterString = "";
-	jupiterString +=	`<section>`;
+	jupiterString +=	`<div class="col-md-6 col-md-offset-3">`;
 	jupiterString +=		`<h3>Name: Jupiter</h3>`;
 	jupiterString +=		`<p>First Detailed Observations: 1610 by Galileo</p>`;
 	jupiterString +=		`<p>Mass: 1.8986×1027 kg</p>`;
@@ -11,7 +11,7 @@ const outputJupiter = () => {
 	jupiterString +=		`<p>Atmosphere composition: Hydrogen, Helium</p>`;
 	jupiterString +=		`<p>Satellites: 53 confirmed</p>`;
 	jupiterString +=		`<p>Name of any probes/orbiters that have visited or landed on that planet: Pioneer 10 & 11, Voyager 1 & 2, Galileo, Ulysses, Cassini, New Horizon, Juno</p>`;
-	jupiterString +=	`</section>`;
+	jupiterString +=	`</div>`;
 	return jupiterString;
 };
 

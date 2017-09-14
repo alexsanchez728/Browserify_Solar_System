@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<title>Solar System</title>
 </head>
 <body>
 
-<div id="mercury"></div>
-<div id="venus"></div>
-<div id="earth"></div>
-<div id="mars"></div>
-<div id="jupiter"></div>
-<div id="saturn"></div>
-<div id="uranus"></div>
-<div id="neptune"></div>
+<div id="buttons">
+	Select a planet to learn more about it:
+	<button class="btn btn-default" id="mercury">Mercury</button>
+	<button class="btn btn-default" id="venus">Venus</button>
+	<button class="btn btn-default" id="earth">Earth</button>
+	<button class="btn btn-default" id="mars">Mars</button>
+	<button class="btn btn-default" id="jupiter">Jupiter</button>
+	<button class="btn btn-default" id="saturn">Saturn</button>
+	<button class="btn btn-default" id="uranus">Uranus</button>
+	<button class="btn btn-default" id="neptune">Neptune</button>
+</div>
+<div class="row" id="output"></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="dist/app.js"></script>
 </body>

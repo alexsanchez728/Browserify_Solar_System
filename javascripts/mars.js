@@ -2,7 +2,7 @@
 
 const outputMars = () => {
 	let marsString = "";
-	marsString += 	`<section>`;
+	marsString += 	`<div class="col-md-6 col-md-offset-3">`;
 	marsString += 		`<h3>Name: Mars</h3>`;
 	marsString += 		`<p>Year discovered: 1659</p>`;
 	marsString += 		`<p>Mass: 6.39 x 10^23 kg</p>`;
@@ -11,7 +11,7 @@ const outputMars = () => {
 	marsString += 		`<p>Atmosphere composition: 95.32% Carbon Dioxide, 2.7% Nitrogen, 1.6% Argon, 0.13% Carbon Monoxide</p>`;
 	marsString += 		`<p>Satellites: Phobos and Deimos</p>`;
 	marsString += 		`<p>Explorers: Matt Damon</p>`;
-	marsString += 	`</seciton>`;
+	marsString += 	`</div>`;
 	return marsString;
 };
 module.exports = outputMars;
