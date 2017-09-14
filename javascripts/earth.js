@@ -15,4 +15,4 @@ const outputEarth = () => {
 	return earthString;
 };
 
-module.Exports = outputEarth;
+module.exports = outputEarth;
